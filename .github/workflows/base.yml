@@ -16,4 +16,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - run: |
           cd base/makepkg
-          docker build . -t ghcr.io/${GITHUB_REPOSITORY}:latest --platform linux/amd64 --push
+          docker build . -t ghcr.io/jfk9w/makepkg:latest --platform linux/amd64 --push
