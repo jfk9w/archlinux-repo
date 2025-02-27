@@ -1,0 +1,2 @@
+d /var/lib/caddy 0750 caddy caddy
+d /etc/caddy 0750 caddy caddy

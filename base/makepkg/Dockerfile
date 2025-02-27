@@ -14,7 +14,8 @@ RUN cd /tmp/paru && makepkg -si --noconfirm
 
 # Set up build directory
 USER root
+COPY entrypoint.sh /entrypoint.sh
 RUN mkdir /build
 WORKDIR /build
 
-CMD chown paru:paru -R . && sudo -u paru paru --noconfirm -B . && chown root:root -R .
+CMD /bin/bash /entrypoint.sh
